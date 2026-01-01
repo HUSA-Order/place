@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact & Order | HUSA</title>
+<meta name="description" content="Place your order with HUSA. Your request is sent to the correct expert automatically.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+  const p=new URLSearchParams(window.location.search);
+  document.getElementById("source").value=p.get("source")||"General";
+  document.getElementById("cid").value=p.get("cid")||"N/A";
+});
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">
+    <h1>HUSA – Hussain Smart Alliance</h1>
+    <p class="tagline">Professional Business & SEO Solutions</p>
+  </div>
+
+  <nav class="main-nav">
+    <a href="https://husmartalliance.github.io/s/" title="HUSA Home">Home</a>
+    <a href="https://husmartalliance.github.io/services.html" title="HUSA Services">Services</a>
+    <a href="https://husmartalliance.github.io/team.html" title="HUSA Team">Team</a>
+    <a href="https://husmartalliance.github.io/blogs.html" title="HUSA Blog">Blog</a>
+    <a href="https://husmartalliance.github.io/contact.html" title="Contact HUSA">Contact</a>
+    <a href="https://husmartalliance.github.io/Policies.html" title="HUSA Policies">Policies</a>
+  </nav>
+</header>
+
+<main>
+<section class="profile">
+<h1>Order & Contact</h1>
+<p>Your selected expert and unique client ID are already attached. Simply submit the form.</p>
+<form action="https://formspree.io/f/xrebzreo" method="POST">
+<input type="hidden" name="source" id="source">
+<input type="hidden" name="client_id" id="cid">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" rows="6" placeholder="Describe your project or request" required></textarea>
+<button class="order-btn" type="submit">Submit Order</button>
+</form>
+</section>
+</main>
+<footer><p>© 2025 HUSA – Hussain Smart Alliance</p></footer>
+</body>
+</html>
